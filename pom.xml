@@ -13,9 +13,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>a3-db</name>
     <description>a3-db</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,6 +45,20 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${project.parent.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>8.0.0</version>
+                <configuration>
+                    <user>${env.DB.USERNAME}</user>
+                    <password>${env.DB.PASSWORD}</password>
+                    <url>jdbc:postgresql://localhost:5432/${env.DB.SCHEMA}</url>
+                    <schemas>
+                        <schema>${env.DB.SCHEMA}</schema>
+                    </schemas>
+                </configuration>
             </plugin>
         </plugins>
     </build>

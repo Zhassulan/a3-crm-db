@@ -1,4 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: ${DB.PASSWORD}
+    url: jdbc:postgresql://localhost:5432/${DB.SCHEMA}
+    username: ${DB.USERNAME}
+
 flyway:
   createSchemas: false
   initSql: CREATE IF NOT EXISTS a3crm
-  schemas: a3crm
+  schemas: ${DB.SCHEMA}
+
+
