@@ -1,0 +1,4 @@
+flyway:
+  createSchemas: false
+  initSql: CREATE IF NOT EXISTS a3crm
+  schemas: a3crm
