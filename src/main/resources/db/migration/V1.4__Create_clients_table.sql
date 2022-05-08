@@ -9,3 +9,9 @@ create table if not exists clients
 );
 
 CREATE UNIQUE INDEX idx_clients_client_type_id ON clients (client_type_id);
+
+CREATE SEQUENCE IF NOT EXISTS seq_clients
+    AS bigint
+    INCREMENT BY 1
+    MINVALUE 1
+    OWNED BY clients.id;

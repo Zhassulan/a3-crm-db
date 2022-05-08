@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.a3</groupId>
-    <artifactId>a3-db</artifactId>
+    <artifactId>a3-crm-db</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>a3-db</name>
-    <description>a3-db</description>
+    <name>a3-crm-db</name>
+    <description>a3-crm-db</description>
 
     <properties>
         <java.version>11</java.version>

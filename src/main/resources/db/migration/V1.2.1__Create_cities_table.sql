@@ -8,3 +8,9 @@ create table if not exists cities
 );
 
 CREATE UNIQUE INDEX idx_cities_country_id ON cities (country_id);
+
+CREATE SEQUENCE IF NOT EXISTS seq_cities
+    AS bigint
+    INCREMENT BY 1
+    MINVALUE 1
+    OWNED BY cities.id;
