@@ -2,7 +2,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     password: ${DB.PASSWORD}
-    url: jdbc:postgresql://localhost:5432/${DB.SCHEMA}
+    url: jdbc:postgresql://localhost:${DB.PORT}/${DB.SCHEMA}
     username: ${DB.USERNAME}
 
 flyway:
