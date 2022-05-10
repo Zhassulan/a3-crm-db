@@ -4,8 +4,8 @@ create table if not exists countries
     code       varchar(10),
     title      varchar(255) not null,
     phone_code varchar(5),
-    created    date         not null default now(),
-    modified   date         not null default now()
+    created    timestamp         not null default now(),
+    modified   timestamp         not null default now()
 );
 
 CREATE SEQUENCE IF NOT EXISTS seq_countries
@@ -13,3 +13,5 @@ CREATE SEQUENCE IF NOT EXISTS seq_countries
     INCREMENT BY 1
     MINVALUE 1
     OWNED BY countries.id;
+
+insert into countries (id, code, title, phone_code) values (nextval('seq_countries'), 'KZ', 'Казахстан', '+7');
