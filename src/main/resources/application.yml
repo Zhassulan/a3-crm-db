@@ -7,7 +7,7 @@ spring:
 
 flyway:
   createSchemas: false
-  initSql: CREATE IF NOT EXISTS a3crm
+  initSql: CREATE IF NOT EXISTS ${DB.SCHEMA}
   schemas: ${DB.SCHEMA}
 
 
